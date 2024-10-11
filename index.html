@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Test</title>
+    <link rel="icon" type="image/png" sizes="128x128" href="images/favicon.png">
+    
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="customize.css" type="text/css">
+    <script src="cards.js" type="text/javascript"></script>
+</head>
+
+  <body>
+    <div class="game-board">
+
+      <div class="hacker-area">
+
+        <h1>
+          <strong>H@CK4R Z0NE</strong> <br/> The rules are simple: select the correct card, and lower the hacker's health all the way below 0. If a correct card is selected, the hacker loses 2 health points, however if an incorrect card is selected you lose the respective points of the card.
+        </h1>
+
+        <div class="stats hacker-stats">
+          <div class="life-bar">
+            <div class="life-left hacker-color"></div>
+          </div>
+          <div class="life-total"></div>
+          <div class="thumbnail">😈</div>
+          <div class="name">Hacker</div>
+        </div>
+        
+        <div class="card hacker-card hacker-color">
+          <div class="text"></div>
+          <div class="power"></div>
+        </div>
+
+      </div>
+
+      <div class="player-area">
+
+        <div class="stats player-stats">
+          <div class="life-bar">
+            <div class="life-left player-color"></div>
+          </div>
+          <div class="life-total"></div>
+          <div class="thumbnail">🤫</div>
+          <div class="name">You</div>
+        </div>
+
+        <div class="card player-card player-color">
+          <div class="text"></div>
+          <div class="power"></div>
+        </div>
+
+        <div class="card player-card player-color">
+          <div class="text"></div>
+          <div class="power"></div>
+        </div>
+
+        <div class="card player-card player-color">
+          <div class="text"></div>
+          <div class="power"></div>
+        </div>
+
+        <button class="start-game" onClick="startGame()">Play the Game!</button>
+        <button class="next-turn" onClick="playTurn()">Next!</button>
+      </div>
+    </div>
+
+
+
+    <div class="winner-section">
+      <div>
+        <span class="winner-message">You got hacked!</span>
+        <button class="restart" onClick="location.reload()">Play Again</button>
+      </div>
+    </div>
+
+    <script src="scripts/script.js" type="text/javascript"></script>
+
+  </body>
+</html>
