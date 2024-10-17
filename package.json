@@ -1,0 +1,22 @@
+{
+  "name": "cybersecurity-game",
+  "version": "1.0.0",
+  "description": "Under heavily development",
+  "main": "index.html",
+  "scripts": {
+    "start": "electron ." 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sid3425/Cybersecurity-Game.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sid3425/Cybersecurity-Game/issues"
+  },
+  "homepage": "https://github.com/sid3425/Cybersecurity-Game#readme",
+  "devDependencies": {
+    "electron": "^33.0.1"
+  }
+}
