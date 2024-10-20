@@ -451,6 +451,32 @@ button[disabled=true] {
   color: black;
 }
 
+.selector-container {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 1000; /* Ensures it is above other content */
+}
+
+.selector-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.selector-button:hover {
+  background-color: white;
+  color: black;
+}
+
 .player-color {
   background-color: #33ceff;
 }

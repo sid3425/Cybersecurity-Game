@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 #bg {
   background-image: url('~/images/chip.svg');
   position: fixed;
@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #4A4A4A;
   display: flex;
   justify-content: center;
