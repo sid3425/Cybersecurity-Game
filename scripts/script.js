@@ -1,6 +1,6 @@
 // Set starting life totals here
-var playerLife = 20;
-var hackerLife = 20;
+var playerLife = 10;
+var hackerLife = 10;
 
 // Message when the game is over
 var hackerWinnerMessage = "Game over: You got hacked!";
@@ -201,7 +201,7 @@ function shuffleArray(a) {
 // Plays one turn of the game
 function playTurn() {
 
-  roundFinished = true;
+  roundFinished = false;
   cardSelected = false;
 
   document.querySelector(".game-board").classList.remove("card-selected");
@@ -212,6 +212,16 @@ function playTurn() {
 
   // Hides the "next turn" button, will show again when turn is over
   document.querySelector(".next-turn").setAttribute("disabled", "true");
+
+  if (roundFinished) {
+    // Disable the next turn button initially
+    document.querySelector(".next-turn").setAttribute("disabled", "true");
+
+    setTimeout(function () {
+        document.querySelector(".next-turn").style.display = "block";
+        document.querySelector(".next-turn").removeAttribute("disabled");
+    }, 200 * (allCardElements.length + 1)); // Show/enable next-turn button after cards
+}
 
   for(var i = 0; i < allCardElements.length; i++) {
     var card = allCardElements[i];

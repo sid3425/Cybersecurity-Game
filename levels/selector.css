@@ -1,79 +1,104 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 100%;
-}
-
-html, body {
-  height: 100vh;
-}
-
 body {
-  font-family: "Open Sans", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Lobster, Georgia, serif;
-  color: #545454;
-}
-
-.container {
-  padding: 0 20px;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2.4rem;
-  margin: 0 0 0.8em;
-  
-  @media screen and (min-width: 400px) {
-    font-size: 3rem;
-  }
-}
-
-.levels {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0 -15px;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-    
-  > li {
-    margin: 0 15px 30px;
-    padding: 5px;
-    width: 120px;
-    height: 120px;
+    font-family: "Open Sans", sans-serif;
+    color: white; /* Consistent with style.css */
+    background-color: #0789b2; /* Consistent background color */
+    background-image: url("images/chip.svg"); /* Consistent background image */
+    background-size: 200px;
+    background-repeat: repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+.container { /* Added for better visual separation and background color */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+    border-radius: 4px; /* Rounded corners */
+}
+
+h1 {
     text-align: center;
-    border: 1px solid #f6f6f6;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1);
-    position: relative;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-        
-    &:hover {
-      color: #fff;
-      background-color: #0789b2;
-      transform: scale(1.04);
+    font-size: 2.4rem;
+    margin: 0 0 0.8em;
+    color: white; /* Consistent text color */
+
+    @media screen and (min-width: 400px) {
+        font-size: 3rem;
     }
-    
-    @media screen and (min-width: 480px) {
-      width: 180px;
-      height: 180px;
+}
+
+.top-left-buttons { /* Style for the button container */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.top-left-buttons a { /* Style for the login button */
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-left-buttons a:hover { /* Hover effect */
+  background-color: white;
+  color: black;
+}
+
+
+.levels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0 -15px; /* Negative margin for spacing adjustment */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+
+    > li {
+        margin: 0 15px 30px; /* Consistent spacing */
+        padding: 5px;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 2px solid white; /* Consistent border style */
+        border-radius: 4px; /* Consistent rounded corners */
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        position: relative;
+        transition: all .2s ease-in-out; /* Smooth transitions */
+        cursor: pointer;
+        background-color: black; /* Consistent background color */
+        color: white; /* Consistent text color */
+
+
+
+        &:hover {
+            background-color: white; /* Consistent hover effect */
+            color: black; /* Consistent hover text color */
+            transform: scale(1.04);
+        }
+
+        @media screen and (min-width: 480px) {
+            width: 180px;
+            height: 180px;
+        }
     }
-    
-  }
-  
-  
 }
