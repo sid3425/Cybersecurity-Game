@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #0789b2;
-  background-image: url('~/images/chip.svg'); /* Relative path, consistent with style.css */
+  background-image: url('../images/chip.svg'); /* Relative path, consistent with style.css */
   background-size: 200px;
   background-repeat: repeat;
   background-position: center;
@@ -19,7 +19,7 @@ body {
 
 #bg {
   /* Consider removing blur or making it a toggleable setting. It makes interaction harder. */
-  background-image: url('~/images/chip.svg'); /* Relative path */
+  background-image: url('../images/chip.svg'); /* Relative path */
   position: fixed;
   left: 0;
   top: 0;
@@ -66,15 +66,13 @@ input {
 .btn {
   /* Button specific styles */
   cursor: pointer;
-  display: block; /* Make the button full width */
-  margin: 1rem auto 0; /* Center the button and add margin */
-  background-color: black; /* Consistent with style.css */
-  color: white; /* Consistent with style.css */
+  display: block;
+  margin: 1rem auto 0;
+  background-color: black;
+  color: white;
 }
 
 .btn:hover {
   background-color: white;
   color: black;
 }
-
-/* ... (rest of the login.css code) ... */

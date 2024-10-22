@@ -4,7 +4,7 @@ body {
     font-family: "Open Sans", sans-serif;
     color: white; /* Consistent with style.css */
     background-color: #0789b2; /* Consistent background color */
-    background-image: url("images/chip.svg"); /* Consistent background image */
+    background-image: url("../images/chip.svg"); /* Consistent background image */
     background-size: 200px;
     background-repeat: repeat;
     display: flex;
