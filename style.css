@@ -8,6 +8,8 @@ body {
   background-size: 200px;
   margin: 0;
   padding: 0;
+  background-color: #0789b2; /* Added background color for consistency */
+  background-image: url(~/images/chip.svg); /* Relative path, consistent with other images */
 }
 
 .game-board {
@@ -425,57 +427,39 @@ button[disabled=true] {
   }
 }
 
-.login-container {
+.top-left-buttons { /* New container for top-left buttons */
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 1000; /* Ensures it is above other content */
+  z-index: 1000; 
+  display: flex;
+  gap: 10px;
 }
 
-.login-button {
+.top-left-buttons a,
+.top-left-buttons button, /* Include "Play the Game" button */
+button.next-turn { /* Include the "Next" button */
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 16px; 
   background-color: black;
   color: white;
   border: 2px solid white;
-  border-radius: 50px;
+  border-radius: 30px;  
   text-decoration: none;
-  font-family: Arial, sans-serif;
+  font-family: "Open Sans", sans-serif; 
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  outline: none; /* Remove default button outline */
 }
 
-.login-button:hover {
+.top-left-buttons a:hover,
+.top-left-buttons button:hover,
+button.next-turn:hover {
   background-color: white;
   color: black;
 }
 
-.selector-container {
-  position: absolute;
-  top: 50px;
-  left: 10px;
-  z-index: 1000; /* Ensures it is above other content */
-}
-
-.selector-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  border: 2px solid white;
-  border-radius: 50px;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.selector-button:hover {
-  background-color: white;
-  color: black;
-}
 
 .player-color {
   background-color: #33ceff;
